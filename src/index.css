@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Escucha calm green palette */
+    --background: 60 30% 98%;
+    --foreground: 150 20% 15%;
+
+    --card: 60 20% 97%;
+    --card-foreground: 150 20% 15%;
+
+    --popover: 60 20% 97%;
+    --popover-foreground: 150 20% 15%;
+
+    /* Deep forest green from logo */
+    --primary: 130 40% 25%;
+    --primary-foreground: 60 30% 98%;
+
+    /* Soft sage */
+    --secondary: 120 20% 92%;
+    --secondary-foreground: 130 40% 25%;
+
+    /* Light mint */
+    --muted: 120 15% 94%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Accent green */
+    --accent: 95 50% 50%;
+    --accent-foreground: 60 30% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 30% 98%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 130 40% 25%;
+
+    --radius: 0.75rem;
+
+    /* Custom Escucha tokens */
+    --cream: 45 40% 96%;
+    --sage: 120 25% 85%;
+    --forest: 130 40% 25%;
+    --forest-light: 130 35% 35%;
+    --leaf: 95 50% 45%;
+    --warm-white: 40 50% 98%;
+
+    --sidebar-background: 60 30% 98%;
+    --sidebar-foreground: 150 10% 35%;
+    --sidebar-primary: 130 40% 25%;
+    --sidebar-primary-foreground: 60 30% 98%;
+    --sidebar-accent: 120 20% 92%;
+    --sidebar-accent-foreground: 130 40% 25%;
+    --sidebar-border: 120 15% 88%;
+    --sidebar-ring: 130 40% 25%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 60 30% 95%;
+    --card: 150 15% 12%;
+    --card-foreground: 60 30% 95%;
+    --popover: 150 15% 12%;
+    --popover-foreground: 60 30% 95%;
+    --primary: 95 50% 50%;
+    --primary-foreground: 150 20% 8%;
+    --secondary: 150 15% 18%;
+    --secondary-foreground: 60 30% 95%;
+    --muted: 150 15% 18%;
+    --muted-foreground: 120 10% 60%;
+    --accent: 130 40% 35%;
+    --accent-foreground: 60 30% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 30% 95%;
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 95 50% 50%;
+    --sidebar-background: 150 20% 8%;
+    --sidebar-foreground: 120 10% 70%;
+    --sidebar-primary: 95 50% 50%;
+    --sidebar-primary-foreground: 150 20% 8%;
+    --sidebar-accent: 150 15% 15%;
+    --sidebar-accent-foreground: 120 10% 70%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 95 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Calm fade-in animation */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes gentle-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  .animate-gentle-float {
+    animation: gentle-float 4s ease-in-out infinite;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-calm {
+    background: linear-gradient(180deg, hsl(var(--warm-white)) 0%, hsl(var(--cream)) 100%);
+  }
+
+  .bg-gradient-sage {
+    background: linear-gradient(135deg, hsl(var(--sage) / 0.3) 0%, hsl(var(--cream)) 100%);
+  }
+}
