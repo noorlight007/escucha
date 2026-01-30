@@ -28,14 +28,6 @@ const Hero = () => {
             >
               Start Your Journey
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection("how-it-works")}
-              className="border-primary text-primary hover:bg-secondary px-8 py-6 text-lg"
-            >
-              Learn More
-            </Button>
           </div>
         </div>
       </div>
