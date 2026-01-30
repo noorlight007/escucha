@@ -4,18 +4,21 @@ const steps = [
   {
     icon: MessageCircle,
     title: "Start a Conversation",
-    description: "Message Escucha on WhatsApp whenever you need a moment of reflection. No appointments, no waiting."
+    description:
+      "Message Escucha on WhatsApp whenever you need a moment of reflection. No appointments, no waiting.",
   },
   {
     icon: Heart,
     title: "Express Freely",
-    description: "Share what's on your mind. Escucha responds with warmth, asking one gentle question to help you explore deeper."
+    description:
+      "Share what's on your mind. Escucha responds with warmth, asking one gentle question to help you explore deeper.",
   },
   {
     icon: Moon,
     title: "Find Your Calm",
-    description: "Receive personalized mindfulness practices, breathing exercises, or simply feel heard — whatever you need."
-  }
+    description:
+      "Receive personalized mindfulness practices, breathing exercises, or simply feel heard — whatever you need.",
+  },
 ];
 
 const HowItWorks = () => {
@@ -33,17 +36,24 @@ const HowItWorks = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={index}
-              className="text-center p-8 rounded-2xl bg-gradient-sage hover:shadow-lg transition-all duration-300"
+              className="
+                group text-center p-8 rounded-2xl
+                bg-white
+                transition-all duration-300
+                hover:bg-[#26592F]
+              "
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                <step.icon className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/15">
+                <step.icon className="w-8 h-8 text-primary transition-colors duration-300 group-hover:text-white" />
               </div>
-              <h3 className="text-xl font-serif font-medium text-foreground mb-3">
+
+              <h3 className="text-xl font-serif font-medium text-foreground mb-3 transition-colors duration-300 group-hover:text-white">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+
+              <p className="text-muted-foreground leading-relaxed transition-colors duration-300 group-hover:text-white">
                 {step.description}
               </p>
             </div>

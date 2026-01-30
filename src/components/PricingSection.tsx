@@ -40,67 +40,122 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
           {/* Basic Plan */}
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div
+            className="
+              group rounded-2xl p-8 border border-border shadow-sm
+              bg-card text-foreground
+              transition-all duration-300
+              hover:bg-primary hover:text-primary-foreground hover:shadow-lg
+              flex flex-col h-full
+            "
+          >
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-serif font-medium text-foreground mb-2">Basic</h3>
+              <h3 className="text-2xl font-serif font-medium mb-2">Basic</h3>
               <div className="flex items-baseline justify-center gap-1">
-                <span className="text-4xl font-semibold text-primary">€9.99</span>
-                <span className="text-muted-foreground">/month</span>
+                <span className="text-4xl font-semibold text-primary transition-colors duration-300 group-hover:text-primary-foreground">
+                  €9.99
+                </span>
+                <span className="text-muted-foreground transition-colors duration-300 group-hover:text-primary-foreground/80">
+                  /month
+                </span>
               </div>
             </div>
 
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3 mb-8 flex-1">
               {basicFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   {feature.included ? (
-                    <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
                   ) : (
-                    <X className="w-5 h-5 text-muted-foreground/50 flex-shrink-0 mt-0.5" />
+                    <X className="w-5 h-5 flex-shrink-0 mt-0.5 text-muted-foreground/50 transition-colors duration-300 group-hover:text-primary-foreground/40" />
                   )}
-                  <span className={feature.included ? "text-foreground/80" : "text-muted-foreground/50"}>
+                  <span
+                    className={
+                      feature.included
+                        ? "text-foreground/80 transition-colors duration-300 group-hover:text-primary-foreground/90"
+                        : "text-muted-foreground/50 transition-colors duration-300 group-hover:text-primary-foreground/40"
+                    }
+                  >
                     {feature.text}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <Button 
-              variant="outline" 
-              className="w-full py-6 text-lg border-primary text-primary hover:bg-secondary"
+            <Button
+              variant="outline"
+              className="
+                mt-auto w-full py-6 text-lg
+                border-primary text-primary hover:bg-secondary
+                transition-colors duration-300
+                group-hover:border-primary-foreground group-hover:text-primary group-hover:bg-primary-foreground
+                group-hover:hover:bg-primary-foreground/90
+              "
             >
               Start Basic
             </Button>
           </div>
 
           {/* Premium Plan */}
-          <div className="bg-primary text-primary-foreground rounded-2xl p-8 shadow-lg relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-leaf text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">
+          <div
+            className="
+              group rounded-2xl p-8 border border-border shadow-sm relative overflow-hidden
+              bg-card text-foreground
+              transition-all duration-300
+              hover:bg-primary hover:text-primary-foreground hover:shadow-lg
+              flex flex-col h-full
+            "
+          >
+            <div
+              className="
+                absolute top-4 right-4 text-xs font-medium px-3 py-1 rounded-full
+                bg-secondary text-foreground
+                transition-colors duration-300
+                group-hover:bg-primary-foreground group-hover:text-primary
+              "
+            >
               Most Popular
             </div>
-            
+
             <div className="text-center mb-8">
               <h3 className="text-2xl font-serif font-medium mb-2">Premium</h3>
               <div className="flex items-baseline justify-center gap-1">
-                <span className="text-4xl font-semibold">€19.99</span>
-                <span className="text-primary-foreground/80">/month</span>
+                <span className="text-4xl font-semibold text-primary transition-colors duration-300 group-hover:text-primary-foreground">
+                  €19.99
+                </span>
+                <span className="text-muted-foreground transition-colors duration-300 group-hover:text-primary-foreground/80">
+                  /month
+                </span>
               </div>
             </div>
 
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-3 mb-8 flex-1">
               {premiumFeatures.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${feature.highlight ? "text-leaf" : "text-primary-foreground"}`} />
-                  <span className={feature.highlight ? "font-medium text-leaf" : "text-primary-foreground/90"}>
+                  <Check className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary transition-colors duration-300 group-hover:text-primary-foreground" />
+                  <span
+                    className={
+                      feature.highlight
+                        ? "font-medium text-foreground transition-colors duration-300 group-hover:text-primary-foreground"
+                        : "text-foreground/80 transition-colors duration-300 group-hover:text-primary-foreground/90"
+                    }
+                  >
                     {feature.text}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <Button 
-              className="w-full py-6 text-lg bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+            <Button
+              className="
+                mt-auto w-full py-6 text-lg
+                bg-primary text-primary-foreground
+                transition-colors duration-300
+                group-hover:bg-primary-foreground group-hover:text-primary
+                group-hover:hover:bg-primary-foreground/90
+              "
             >
               Start Premium
             </Button>
