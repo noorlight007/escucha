@@ -1,10 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WhyWhatsApp from "@/components/WhyWhatsApp";
 import TestimonialCard from "@/components/TestimonialCard";
 import HowItWorks from "@/components/HowItWorks";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import NatureSection from "@/components/NatureSection";
 import PricingSection from "@/components/PricingSection";
+import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
@@ -16,15 +19,15 @@ const heroTestimonial = {
 
 const postHowItWorksTestimonials = [
   {
-    quote: "It's like having a calm friend who listens without trying to solve everything. I didn't know I needed this.",
+    quote: "Es como tener un amigo tranquilo que escucha sin intentar resolverlo todo.",
     author: "Carlos R."
   },
   {
-    quote: "The daily check-ins have become my favorite part of the morning. Simple, gentle, grounding.",
+    quote: "Las revisiones diarias se han convertido en mi parte favorita de la mañana. Simple, suave, que me ancla.",
     author: "Lucía P."
   },
   {
-    quote: "I was skeptical, but after two weeks I noticed I was sleeping better and worrying less.",
+    quote: "Era escéptico, pero tras dos semanas noté que dormía mejor y me preocupaba menos.",
     author: "Miguel A."
   }
 ];
@@ -54,7 +57,7 @@ const Index = () => {
       <Hero />
       
       {/* Subtle testimonial under hero */}
-      <section className="py-8 bg-muted/20">
+      {/* <section className="py-8 bg-muted/20">
         <div className="container mx-auto px-6">
           <TestimonialCard 
             quote={heroTestimonial.quote}
@@ -62,25 +65,28 @@ const Index = () => {
             subtle
           />
         </div>
-      </section>
+      </section> */}
       
+      {/* Why WhatsApp Section */}
+      <WhyWhatsApp />
+
       {/* How It Works */}
       <HowItWorks />
       
       {/* 3 Testimonials after How It Works */}
-      <TestimonialsSection testimonials={postHowItWorksTestimonials} columns={3} />
+      <TestimonialsCarousel testimonials={postHowItWorksTestimonials} />
       
       {/* Full-width Nature Background Section */}
       <NatureSection />
       
       {/* 2 Testimonials before Pricing */}
-      <TestimonialsSection testimonials={prePricingTestimonials} columns={2} />
+      {/* <TestimonialsSection testimonials={prePricingTestimonials} columns={2} /> */}
       
       {/* Pricing Section */}
       <PricingSection />
       
       {/* Final Testimonial near CTA */}
-      <section className="py-12 bg-muted/30">
+      {/* <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <TestimonialCard 
             quote={finalTestimonial.quote}
@@ -88,7 +94,10 @@ const Index = () => {
             subtle
           />
         </div>
-      </section>
+      </section> */}
+
+      {/* FAQ Section */}
+      <FAQSection />
       
       {/* Final CTA */}
       <FinalCTA />

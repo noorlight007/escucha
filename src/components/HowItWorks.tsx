@@ -3,21 +3,21 @@ import { MessageCircle, Heart, Moon } from "lucide-react";
 const steps = [
   {
     icon: MessageCircle,
-    title: "Start a Conversation",
+    title: "Haz clic y abre el chat",
     description:
-      "Message Escucha on WhatsApp whenever you need a moment of reflection. No appointments, no waiting.",
+      "Elige cómo te sientes: estrés, sueño, bloqueo, o simplemente pausa.",
   },
   {
     icon: Heart,
-    title: "Express Freely",
+    title: "Recibe guía inmediata",
     description:
-      "Share what's on your mind. Escucha responds with warmth, asking one gentle question to help you explore deeper.",
+      "ESCUCHA responde con prácticas breves adaptadas a lo que necesitas.",
   },
   {
     icon: Moon,
-    title: "Find Your Calm",
+    title: "Vuelve cada día, si quieres",
     description:
-      "Receive personalized mindfulness practices, breathing exercises, or simply feel heard — whatever you need.",
+      "Puedes crear una rutina diaria o usarlo cuando lo necesites.",
   },
 ];
 
@@ -26,11 +26,14 @@ const HowItWorks = () => {
     <section id="how-it-works" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
+          <p className="text-primary font-medium mb-3 uppercase tracking-wide text-sm">
+            Cómo funciona
+          </p>
           <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-4">
-            How It Works
+            ¿Cómo funciona ESCUCHA?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Your personal space for conscious reflection, available right in WhatsApp.
+            Un espacio personal de regulación emocional, directo a tu bolsillo. Solo haz clic y empieza.
           </p>
         </div>
 

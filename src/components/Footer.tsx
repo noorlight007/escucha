@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="py-12 bg-muted/50 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <img src={logo} alt="Escucha" className="h-8" />
+          <img src={logo} alt="Escucha" className="h-12" />
           
           <div className="flex gap-8 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
