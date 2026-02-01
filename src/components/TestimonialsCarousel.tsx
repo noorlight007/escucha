@@ -11,37 +11,51 @@ interface TestimonialsCarouselProps {
   testimonials: Array<{
     quote: string;
     author: string;
+    /** Real profile photo URL/path */
+    photoSrc?: string;
+    /** Optional subtitle (role/location) */
+    meta?: string;
   }>;
 }
 
 const TestimonialsCarousel = ({ testimonials }: TestimonialsCarouselProps) => {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-12 sm:py-16 bg-muted/25">
       <div className="container mx-auto px-6">
-        <div className="max-w-4xl mx-auto">
-          <Carousel
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            className="w-full"
-          >
+        <div className="mx-auto max-w-4xl">
+
+          <Carousel opts={{ align: "center", loop: true }} className="relative">
             <CarouselContent className="-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/1 lg:basis-1/1">
-                  <div className="p-2">
+              {testimonials.map((t, index) => (
+                <CarouselItem key={index} className="pl-4 basis-full">
+                  <div className="mx-auto w-full max-w-[720px]">
                     <TestimonialCard
-                      quote={testimonial.quote}
-                      author={testimonial.author}
-                      showAvatar
+                      quote={t.quote}
+                      author={t.author}
+                      meta={t.meta}
+                      photoSrc={t.photoSrc}
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-12 bg-primary/10 border-primary/20 text-primary hover:bg-primary/20" />
-            <CarouselNext className="right-0 md:-right-12 bg-primary/10 border-primary/20 text-primary hover:bg-primary/20" />
+
+            <CarouselPrevious
+              className={
+                "left-2 sm:-left-12 top-1/2 -translate-y-1/2 " +
+                "bg-white/70 backdrop-blur border-emerald-500/15 text-emerald-700 " +
+                "hover:bg-white hover:border-emerald-500/25 shadow-sm"
+              }
+            />
+            <CarouselNext
+              className={
+                "right-2 sm:-right-12 top-1/2 -translate-y-1/2 " +
+                "bg-white/70 backdrop-blur border-emerald-500/15 text-emerald-700 " +
+                "hover:bg-white hover:border-emerald-500/25 shadow-sm"
+              }
+            />
           </Carousel>
+
         </div>
       </div>
     </section>
