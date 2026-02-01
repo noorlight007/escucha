@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[hsl(130,45%,22%)] via-[hsl(120,40%,30%)] to-[hsl(95,45%,35%)] backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <img src={logo} alt="Escucha" className="h-10 md:h-12 brightness-0 invert" />
+          <img src={logo} alt="Escucha" className="h-12 md:h-12 brightness-0 invert" />
 
           {/* Desktop / Large screens */}
           <div className="hidden lg:flex items-center gap-6">
