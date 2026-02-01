@@ -15,10 +15,16 @@ const Navbar = () => {
           
           <div className="hidden md:flex items-center gap-8">
             <button 
+              onClick={() => scrollToSection("why-whatsapp")}
+              className="text-white/80 hover:text-white transition-colors font-medium"
+            >
+              Por qué WhatsApp
+            </button>
+            <button 
               onClick={() => scrollToSection("how-it-works")}
               className="text-white/80 hover:text-white transition-colors font-medium"
             >
-              How It Works
+              Cómo funciona
             </button>
             <button 
               onClick={() => scrollToSection("pricing")}

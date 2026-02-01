@@ -20,7 +20,7 @@ const features = [
 
 const WhyWhatsApp = () => {
   return (
-    <section className="py-20 bg-secondary/30">
+    <section id="why-whatsapp" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-primary font-medium mb-3 uppercase tracking-wide text-sm">
