@@ -5,7 +5,7 @@ const CreatorSection = () => {
     <section className="py-20 bg-secondary/30">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-12 text-center">
-          Who created ESCUCHA?
+          ¿Quién crea ESCUCHA?
         </h2>
         
         <div className="max-w-5xl mx-auto">
