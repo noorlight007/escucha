@@ -41,9 +41,9 @@ const FinalCTA = () => {
             <Button
               size="lg"
               onClick={() => scrollToSection("pricing")}
-              className="bg-primary hover:bg-forest-light text-primary-foreground px-10 py-6 text-lg"
+              className="bg-primary hover:bg-forest-light text-primary-foreground px-5 py-8 text-lg"
             >
-              Abrir ESCUCHA en WhatsApp
+              <img width="48" height="48" src="https://img.icons8.com/color/144/whatsapp--v1.png" alt="whatsapp--v1"/> Abrir ESCUCHA en WhatsApp
             </Button>
             <p className="text-sm text-white animate-fade-in-up opacity-0 animation-delay-600 py-3">Gratis. Priv</p>
           </div>

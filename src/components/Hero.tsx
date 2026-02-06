@@ -23,9 +23,9 @@ const Hero = () => {
             <Button 
               size="lg"
               onClick={() => scrollToSection("pricing")}
-              className="bg-primary hover:bg-forest-light text-primary-foreground px-8 py-6 text-lg"
+              className="bg-primary hover:bg-forest-light text-primary-foreground px-5 py-7 text-lg"
             >
-              Abrir en WhatsApp
+              <img width="48" height="48" src="https://img.icons8.com/color/144/whatsapp--v1.png" alt="whatsapp--v1"/> Abrir en WhatsApp
             </Button>
           </div>
           <p className="text-sm animate-fade-in-up opacity-0 animation-delay-600 py-3">Gratis. Sin apps. Sin registros. Empieza en 10 segundos.</p>
