@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-calm pt-20">
+    <section className="min-h-screen flex items-center justify-center bg-background pt-20">
       <div className="container mx-auto px-6 py-20 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-foreground mb-6 animate-fade-in-up opacity-0">
